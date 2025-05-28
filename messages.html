@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave a Message</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffccff;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        textarea {
+            width: 80%;
+            height: 100px;
+            margin: 10px 0;
+        }
+        button {
+            padding: 10px;
+            background: #ff66b2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #ff3385;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            background: white;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+            .nav-links {
+            margin-top: 20px;
+            padding: 10px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            }
+        }
+        .nav-links a {
+            margin: 10px;
+            padding: 10px;
+            text-decoration: none;
+            display: inline-block;
+            color: black;
+            transition: background 0.3s, color 0.3s;
+        }
+        .nav-links a:hover {
+            background: #ff99cc;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-links">
+        <a href="suprise.html">Surprise Box🎁</a>
+        <a href="messages.html">💌 Make a wish</a>
+        <a href="music.html">🎵 Play Birthday Song</a>
+    </div>
+    <h3>💌 Make a wish and santa- I mean the birthday magical creature will fulfill it for you</h3>
+    <textarea id="message" placeholder="Write your birthday wish here..."></textarea><br>
+    <button onclick="addMessage()">Submit</button>
+    <ul id="messages"></ul>
+
+    <script>
+        function addMessage() {
+            let messageText = document.getElementById("message").value;
+            if (messageText.trim() !== "") {
+                let li = document.createElement("li");
+                li.textContent = messageText;
+                document.getElementById("messages").appendChild(li);
+                document.getElementById("message").value = "";
+            }
+        }
+    </script>
+</body>
+</html>

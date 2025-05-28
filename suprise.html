@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise!</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffccff;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px;
+            background: #ff66b2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #ff3385;
+        }
+        .nav-links {
+            margin-top: 20px;
+            padding: 10px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .nav-links a {
+            margin: 10px;
+            padding: 10px;
+            text-decoration: none;
+            display: inline-block;
+            color: black;
+            transition: background 0.3s, color 0.3s;
+        }
+        .nav-links a:hover {
+            background: #ff99cc;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-links">
+        <a href="suprise.html">Surprise Box🎁</a>
+        <a href="messages.html">💌 Make a wish</a>
+        <a href="music.html">🎵 Play Birthday Song</a>
+    <h1>🎁 Surprise!</h1>
+    <p>Click the button to reveal your birthday surprise!</p>
+    <button onclick="showSurprise()">Open Gift 🎀</button>
+    <p id="surprise-message" style="display: none; font-size: 20px; color: #ff3385;">🎊 You are an amazing friend! Wishing you all the happiness in the world! :3</p>
+
+    <script>
+        function showSurprise() {
+            document.getElementById("surprise-message").style.display = "block";
+        }
+    </script>
+</body>
+</html>
